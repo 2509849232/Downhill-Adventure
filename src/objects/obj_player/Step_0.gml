@@ -10,8 +10,15 @@ AddGravity();
 onFloor = _CheckForFloor();
 
 // JUMP
-if (onFloor && Space) {
-	vsp += -12;
+if (onFloor) {
+	coyoteTime = 6;
+	canJump = true;
+}
+coyoteTime -= 1;
+
+if (coyoteTime >= 0 && Space && canJump) {
+	vsp = -12;
+	canJump = false;
 }
 
 
