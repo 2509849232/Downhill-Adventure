@@ -38,15 +38,14 @@ if (!casting) {
 	if (!onFloor) {
 	sprite_index = spr_player_jump;
 	image_speed = 0;
-}
-else {
-	image_speed = 1;
-	if (hsp == 0) {
-		sprite_index = spr_player_idle;
 	} else {
-		sprite_index = spr_player_run;
+		image_speed = 1;
+		if (hsp == 0) {
+			sprite_index = spr_player_idle;
+		} else {
+			sprite_index = spr_player_run;
+		}
 	}
-}
 }
 
 

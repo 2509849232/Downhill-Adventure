@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "spr_head_mask",
-    "path": "sprites/spr_head_mask/spr_head_mask.yy",
+    "name": "spr_diamond_white",
+    "path": "sprites/spr_diamond_white/spr_diamond_white.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -21,18 +21,18 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Tree",
-    "path": "folders/Toons/Tree.yy",
+    "name": "Diamonds",
+    "path": "folders/Collectables/Diamonds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_head_mask",
+  "name": "obj_diamond_white",
   "tags": [],
   "resourceType": "GMObject",
 }
