@@ -5,32 +5,19 @@ mbLeft = mouse_check_button_pressed(mb_left);
 
 var move = D - A;
 hsp = move * walkSpd;
-vsp += grv;
+AddGravity();
 
-// Check for Floor
-if (place_meeting(x,y+1,obj_wall) && Space) {
+onFloor = _CheckForFloor();
+
+// JUMP
+if (onFloor && Space) {
 	vsp += -12;
 }
 
-// Hor Colls
-if (place_meeting(x+hsp,y,obj_wall)) {
-	while (!place_meeting(x+sign(hsp),y,obj_wall)) {
-		x = x + sign(hsp);
-	}
-	hsp = 0;
-}
 
-x += hsp;
-
-// Vert Colls
-if (place_meeting(x,y+vsp,obj_wall)) {
-	while (!place_meeting(x,y+sign(vsp),obj_wall)) {
-		y = y + sign(vsp);
-	}
-	vsp = 0;
-}
-
-y += vsp;
+HorizonalCollision();
+VerticalCollision();
+MoveToon();
 
 // Casting
 if (mbLeft && !casting && castingDelay < 0) {
@@ -48,7 +35,7 @@ if (mbLeft && !casting && castingDelay < 0) {
 
 // Animation
 if (!casting) {
-	if (!place_meeting(x,y+1,obj_wall)) {
+	if (!onFloor) {
 	sprite_index = spr_player_jump;
 	image_speed = 0;
 }
@@ -63,7 +50,7 @@ else {
 }
 
 
-if (hsp != 0) image_xscale = sign(hsp);
+PickSpriteDirection();
 
 // Reducing Casting Delay
 castingDelay -= 1;
