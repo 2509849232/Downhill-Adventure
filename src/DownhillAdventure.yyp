@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"spr_diamond_white","path":"sprites/spr_diamond_white/spr_diamond_white.yy",},"order":0,},
+    {"id":{"name":"spr_nature_root","path":"sprites/spr_nature_root/spr_nature_root.yy",},"order":0,},
     {"id":{"name":"spr_player_run","path":"sprites/spr_player_run/spr_player_run.yy",},"order":2,},
     {"id":{"name":"AddGravity","path":"scripts/AddGravity/AddGravity.yy",},"order":4,},
     {"id":{"name":"PickSpriteDirection","path":"scripts/PickSpriteDirection/PickSpriteDirection.yy",},"order":2,},
@@ -24,6 +25,7 @@
     {"id":{"name":"spr_forest","path":"sprites/spr_forest/spr_forest.yy",},"order":0,},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":0,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":1,},
+    {"id":{"name":"obj_nature_root","path":"objects/obj_nature_root/obj_nature_root.yy",},"order":1,},
     {"id":{"name":"HorizonalCollision","path":"scripts/HorizonalCollision/HorizonalCollision.yy",},"order":0,},
     {"id":{"name":"obj_toon_parent","path":"objects/obj_toon_parent/obj_toon_parent.yy",},"order":4,},
     {"id":{"name":"rm_forest","path":"rooms/rm_forest/rm_forest.yy",},"order":0,},
@@ -63,6 +65,7 @@
     {"folderPath":"folders/Collectables.yy","order":15,"resourceVersion":"1.0","name":"Collectables","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Collectables/Diamonds.yy","order":1,"resourceVersion":"1.0","name":"Diamonds","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Collectables/AniCurves.yy","order":2,"resourceVersion":"1.0","name":"AniCurves","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Magic/Root.yy","order":2,"resourceVersion":"1.0","name":"Root","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

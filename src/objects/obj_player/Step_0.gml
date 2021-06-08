@@ -33,10 +33,18 @@ if (mbLeft && !casting && castingDelay < 0) {
 	alarm_set(0,8);
 	castingDelay = delayAmount;
 	
-	var spell = instance_create_layer(x,y-50,"layer_spells",obj_arcane_fireball);
-	with (spell) {
+	//var spell = instance_create_layer(x,y-50,"layer_spells",obj_arcane_fireball);
+	//with (spell) {
+	//	direction = point_direction(x,y,mouse_x,mouse_y);
+	//	speed = 10;
+	//}
+	
+	var root = instance_create_layer(x,y-50,"layer_spells",obj_nature_root);
+	with(root) {
+		x = other.x;
+		y = other.y - 32;
 		direction = point_direction(x,y,mouse_x,mouse_y);
-		speed = 10;
+		image_angle = direction;
 	}
 }
 
