@@ -2,6 +2,7 @@
 A = keyboard_check(ord("A")) || keyboard_check(vk_left);
 D = keyboard_check(ord("D")) || keyboard_check(vk_right);
 Space = keyboard_check_pressed(vk_space);
+SpaceRelease = keyboard_check_released(vk_space);
 mbLeft = mouse_check_button_pressed(mb_left);
 
 switch(state) {
@@ -19,10 +20,15 @@ switch(state) {
 		coyoteTime -= 1;
 
 		if (coyoteTime >= 0 && Space && canJump) {
-			vsp = -12;
+			vsp = -13;
 			canJump = false;
 		}
-
+		
+		if (canJump == false && vsp < 0 && SpaceRelease) {
+			vsp = vsp / 2;
+		} 
+		// END OF JUMP CODE
+		
 		AddGravity();
 		HorizonalCollision();
 		VerticalCollision();
