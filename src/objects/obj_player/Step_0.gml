@@ -4,9 +4,6 @@ D = keyboard_check(ord("D")) || keyboard_check(vk_right);
 Space = keyboard_check_pressed(vk_space);
 mbLeft = mouse_check_button_pressed(mb_left);
 
-//Code for all state
-AddGravity();
-
 switch(state) {
 	case playerState.normal:
 		var move = D - A;
@@ -26,7 +23,7 @@ switch(state) {
 			canJump = false;
 		}
 
-
+		AddGravity();
 		HorizonalCollision();
 		VerticalCollision();
 		MoveToon();

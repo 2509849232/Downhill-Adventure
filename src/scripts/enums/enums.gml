@@ -8,3 +8,11 @@ enum playerState {
 	normal,
 	dead
 }
+
+
+enum treeState {
+	patrol,
+	chase,
+	attack,
+	dead
+}

@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"spr_tree_dead","path":"sprites/spr_tree_dead/spr_tree_dead.yy",},"order":4,},
     {"id":{"name":"spr_diamond_white","path":"sprites/spr_diamond_white/spr_diamond_white.yy",},"order":0,},
     {"id":{"name":"spr_nature_root","path":"sprites/spr_nature_root/spr_nature_root.yy",},"order":0,},
     {"id":{"name":"spr_player_run","path":"sprites/spr_player_run/spr_player_run.yy",},"order":2,},
