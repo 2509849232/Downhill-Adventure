@@ -14,19 +14,23 @@ switch(state) {
 
 		// JUMP
 		if (onFloor) {
-			coyoteTime = 6;
+			coyoteTime = 5;
 			canJump = true;
-		}
-		coyoteTime -= 1;
-
-		if (coyoteTime >= 0 && Space && canJump) {
-			vsp = -13;
-			canJump = false;
+			availableJumps = totalJumpsICanTake;
 		}
 		
-		if (canJump == false && vsp < 0 && SpaceRelease) {
+		if (coyoteTime >= 0 && Space && availableJumps > 0
+			|| Space && availableJumps > 0) 
+		{
+			availableJumps--
+			vsp = -13;
+		}
+		
+		if (availableJumps >= 0 && vsp < 0 && SpaceRelease) {
 			vsp = vsp / 2;
-		} 
+		}
+		
+		coyoteTime -= 1;
 		// END OF JUMP CODE
 		
 		AddGravity();
