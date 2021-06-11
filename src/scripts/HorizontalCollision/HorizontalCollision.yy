@@ -6,7 +6,7 @@
     "path": "folders/Toons/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "HorizonalCollision",
+  "name": "HorizontalCollision",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -6,7 +6,7 @@
     "path": "folders/Toons/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "_CheckForFloor",
+  "name": "MoveVertical",
   "tags": [],
   "resourceType": "GMScript",
 }

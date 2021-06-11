@@ -10,7 +10,7 @@ switch(state) {
 		var move = D - A;
 		hsp = move * walkSpd;
 
-		onFloor = _CheckForFloor();
+		onFloor = CheckForFloor();
 
 		// JUMP
 		if (onFloor) {
@@ -23,7 +23,7 @@ switch(state) {
 			|| Space && availableJumps > 0) 
 		{
 			availableJumps--
-			vsp = -13;
+			vsp = jumpHeight;
 		}
 		
 		if (availableJumps >= 0 && vsp < 0 && SpaceRelease) {
@@ -33,10 +33,11 @@ switch(state) {
 		coyoteTime -= 1;
 		// END OF JUMP CODE
 		
-		AddGravity();
-		HorizonalCollision();
-		VerticalCollision();
-		MoveToon();
+		vsp = AddGravity(vsp,grv);
+		hsp = HorizonalCollision(x,y,hsp,collision_mask);
+		vsp = VerticalCollision(x,y,vsp,collision_mask);
+		x = MoveHorizontal(x,hsp);
+		y = MoveVertical(y,vsp);
 		
 		switch (currentWeapon) {
 			case weapon.arcane_fireball:
@@ -61,9 +62,7 @@ switch(state) {
 				}
 			}
 		}
-
-
-		PickSpriteDirection();
+		if (hsp != 0) image_xscale = PickSpriteDirection(hsp);
 
 		// Reducing Casting Delay
 		castingDelay -= 1;
