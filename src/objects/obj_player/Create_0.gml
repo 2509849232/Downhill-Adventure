@@ -5,7 +5,6 @@ delayAmount = 1;
 
 // Jump stuff
 coyoteTime = 60;
-canJump = true;
 totalJumpsICanTake = 2;
 availableJumps = totalJumpsICanTake;
 jumpHeight = -13;

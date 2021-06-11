@@ -10,12 +10,11 @@ switch(state) {
 		var move = D - A;
 		hsp = move * walkSpd;
 
-		onFloor = CheckForFloor();
+		onFloor = CheckForFloor(8);
 
 		// JUMP
 		if (onFloor) {
 			coyoteTime = 5;
-			canJump = true;
 			availableJumps = totalJumpsICanTake;
 		}
 		
@@ -34,8 +33,10 @@ switch(state) {
 		// END OF JUMP CODE
 		
 		vsp = AddGravity(vsp,grv);
-		hsp = HorizonalCollision(x,y,hsp,collision_mask);
-		vsp = VerticalCollision(x,y,vsp,collision_mask);
+		hsp = HorizonalCollision(self,hsp,collision_mask);
+		vsp = VerticalCollision(self, vsp, collision_mask);
+		
+		vsp = clamp(vsp,-30,15);
 		x = MoveHorizontal(x,hsp);
 		y = MoveVertical(y,vsp);
 		

@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 66,
-    "yorigin": 109,
+    "yorigin": 110,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_player_jump","path":"sprites/spr_player_jump/spr_player_jump.yy",},
