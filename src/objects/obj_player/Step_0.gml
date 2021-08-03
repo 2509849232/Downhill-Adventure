@@ -39,7 +39,7 @@ switch(state) {
 		vsp = clamp(vsp,-30,15);
 		x = MoveHorizontal(x,hsp);
 		y = MoveVertical(y,vsp);
-		
+	
 		switch (currentWeapon) {
 			case weapon.arcane_fireball:
 				Casting(obj_arcane_fireball,delayAmount, 15);
